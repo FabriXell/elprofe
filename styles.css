@@ -43,8 +43,6 @@ z-index:1;
 overflow:hidden;
 }
 
-animation:particlesMove 8s linear infinite;
-
 @keyframes particlesMove{
 0%{
 transform:translateY(0px);
