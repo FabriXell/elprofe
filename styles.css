@@ -4,6 +4,11 @@ padding:0;
 box-sizing:border-box;
 }
 
+html,body{
+width:100%;
+overflow-x:hidden;
+}
+
 body{
 font-family:'Poppins',sans-serif;
 
@@ -11,16 +16,17 @@ background:
 radial-gradient(circle at top,#5a0000 0%,#1a0000 18%,#050505 55%,#000 100%);
 
 min-height:100vh;
-height:100vh;
 
 display:flex;
 justify-content:center;
 align-items:center;
 
-overflow-x: hidden;
-overflow-y: hidden;
+overflow-x:hidden;
+overflow-y:auto;
 
 position:relative;
+
+padding:20px;
 }
 
 /* PARTICULAS */
@@ -41,9 +47,9 @@ opacity:0.7;
 z-index:1;
 
 overflow:hidden;
-}
 
 animation:particlesMove 8s linear infinite;
+}
 
 @keyframes particlesMove{
 0%{
@@ -161,7 +167,8 @@ position:relative;
 
 z-index:2;
 
-width:370px;
+width:100%;
+max-width:370px;
 
 padding:35px 30px;
 
@@ -384,31 +391,6 @@ background:
 linear-gradient(135deg,#25D366,#118b43);
 }
 
-/* RESPONSIVE */
-
-@media(max-width:420px){
-
-.container{
-width:95%;
-padding:35px 24px;
-}
-
-.logo{
-font-size:42px;
-}
-
-.card{
-font-size:15px;
-padding:17px;
-}
-
-.logo-box{
-width:52px;
-height:52px;
-}
-
-}
-
 /* MINI LUCES */
 
 .floating-light{
@@ -445,8 +427,6 @@ bottom:120px;
 right:140px;
 }
 
-/* DECORACIONES PREMIUM */
-
 /* DECORACIONES */
 
 .deco{
@@ -470,8 +450,8 @@ animation:float 6s ease-in-out infinite;
 }
 
 .deco img{
-    max-width:100%;
-    display:block;
+max-width:100%;
+display:block;
 }
 
 /* TACITA */
@@ -491,7 +471,7 @@ transform:rotate(18deg);
 width:250px;
 
 top:150px;
-right: 400px;
+right:400px;
 
 transform:rotate(18deg);
 }
@@ -538,4 +518,143 @@ transform:translateY(-12px);
 100%{
 transform:translateY(0px);
 }
+}
+
+/* ========================= */
+/* RESPONSIVE CELULARES */
+/* ========================= */
+
+@media (max-width:768px){
+
+body{
+padding:25px 15px;
+
+align-items:flex-start;
+
+overflow-x:hidden;
+overflow-y:auto;
+}
+
+/* CONTENEDOR */
+
+.container{
+width:100%;
+max-width:380px;
+
+padding:30px 22px;
+
+margin-top:40px;
+
+border-radius:25px;
+}
+
+/* TITULO */
+
+.logo{
+font-size:38px;
+}
+
+/* TEXTO */
+
+.tagline{
+font-size:14px;
+line-height:1.6;
+
+margin-bottom:28px;
+}
+
+/* BOTONES */
+
+.card{
+padding:16px;
+
+font-size:15px;
+
+border-radius:16px;
+}
+
+/* LOGO */
+
+.logo-box{
+width:50px;
+height:50px;
+
+top:15px;
+left:15px;
+}
+
+/* ICONOS */
+
+.card span{
+font-size:18px;
+}
+
+/* IMAGENES */
+
+img{
+max-width:100%;
+height:auto;
+}
+
+/* DECORACIONES */
+
+.deco1,
+.deco2,
+.deco3,
+.deco4{
+width:110px;
+
+opacity:0.45;
+}
+
+/* POSICIONES */
+
+.deco1{
+top:20px;
+left:-25px;
+}
+
+.deco2{
+top:40px;
+right:-25px;
+}
+
+.deco3{
+bottom:40px;
+left:-25px;
+}
+
+.deco4{
+bottom:20px;
+right:-25px;
+}
+
+/* GLOWS */
+
+.glow1{
+width:220px;
+height:220px;
+}
+
+.glow2{
+width:180px;
+height:180px;
+}
+
+/* LAMPARA */
+
+.lamp-glow{
+width:280px;
+height:160px;
+
+top:-70px;
+}
+
+/* CENTRO */
+
+.center-glow{
+width:260px;
+height:260px;
+}
+
 }
